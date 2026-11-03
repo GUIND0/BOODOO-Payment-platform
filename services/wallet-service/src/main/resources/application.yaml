@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: wallet-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wallet_db
+    username: wallet_user
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8081
